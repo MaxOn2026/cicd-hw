@@ -8,8 +8,8 @@ jobs:
   testing:
     runs-on: ubuntu-latest
     env:
-      SECRET_KEY: ${{ secrets.SECRET }}
-      DEBUG: ${{ secrets.DEBUG_MODE }}
+      SECRET_KEY: ${{ secrets.SECRET_KEY }}
+      DEBUG: ${{ secrets.DEBUG }}
       ALLOWED: ${{ secrets.ALLOWED_HOSTS }}
       DB_ENGINE: ${{ secrets.DB_ENGINE }}
       DB_NAME: ${{ secrets.DB_NAME }}
@@ -65,4 +65,4 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.SSH_PASSWORD }}
-          script: expect /home/amuzhev/django_cicd/deploy.exp
+          script: expect /home/max/django_cicd/deploy.exp
